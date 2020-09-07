@@ -116,7 +116,7 @@ def black_box_generate(model, dataset, grads= white_box_grad, delta=0.2, max_ite
 
 
         # Compute the estimated labels in batches
-        distortion = np.linalg.norm(np.squeeze(v.numpy()), 2)
+        distortion = np.linalg.norm(v.numpy())
         print("Distortion: " + str(distortion))
         numSuccess = 0            
         for i in range(num_images*70):
