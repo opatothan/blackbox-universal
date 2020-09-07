@@ -44,7 +44,7 @@ np.concatenate((file, blank), axis=0)
 np.concatenate((file, v[2].numpy()), axis=0)
 
 df = pd.DataFrame(file)
-filepath = r"C:\Users\Paul Hao\Documents\Adversial Deep learning\blackbox-universal\v1"
+filepath = r"filepath for data"
 
 df.to_excel(filepath, index=False)
 
