@@ -28,23 +28,3 @@ testing_data =torch.utils.data.Subset(test_dataset, range(5000))
 v, data = generator_blackbox.black_box_generate(amodel, testing_data)
 #v = generator.white_box_generate(amodel, dataset)
 
-v= torch.squeeze(v)
-
-file = np.asarray([[None]*32]*len(data))
-for i in range(len(data)):
-    file[i][0] = data[i][0]
-    file[i][1] = data[i][1]
-
-blank = np.array([[None]*32])    
-np.concatenate((file, blank), axis=0)
-np.concatenate((file, v[0].numpy()), axis=0)
-np.concatenate((file, blank), axis=0)
-np.concatenate((file, v[1].numpy()), axis=0)
-np.concatenate((file, blank), axis=0)
-np.concatenate((file, v[2].numpy()), axis=0)
-
-df = pd.DataFrame(file)
-filepath = r"filepath for data"
-
-df.to_excel(filepath, index=False)
-
