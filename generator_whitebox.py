@@ -2,7 +2,7 @@
 """
 Created on Fri Aug  7 11:00:24 2020
 
-@author: Paul Hao
+@author: Aaron Hao
 """
 
 import torch
