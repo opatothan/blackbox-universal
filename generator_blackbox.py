@@ -2,7 +2,7 @@
 """
 Created on Sat Aug 22 08:47:24 2020
 
-@author: Paul Hao
+@author: Aaron Hao
 """
 import torch
 import numpy as np
